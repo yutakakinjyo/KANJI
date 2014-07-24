@@ -3,6 +3,8 @@ KANJI
 
 幹事のためのサービス :beers:
 
+![](https://cloud.githubusercontent.com/assets/1648096/3687924/543d0b90-132f-11e4-96b8-9a262cd79be6.png)
+
 - 飲み会
   - タイトル
   - 詳細
