@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<div>
+  <h2><%= @plan.title %></h2>
+  <p>
+    <%=h @plan.print_detail.html_safe %>
+  </p>
+  <p><strong>人数</strong>: <%= @plan.users.size %>/<%= @plan.size %></p>
+  <p><strong>幹事</strong>: <%= @plan.user.login %></p>
+</div>
+<div>
+  <strong>参加者:</strong>
+  <% @plan.users.each do |user| %>
+    <div><%= user.login %></div>
+  <% end %>
+</div>
+
+<% unless @user.kanji?(@plan) %>
+  <%= form_for(@plan) do |f| %>
+    <% if @user.join?(@plan) %>
+      <%= f.submit 'キャンセル' %>
+    <% else %>
+      <%= f.submit '参加する' %>
+    <% end %>
+  <% end %>
+<% end %>
