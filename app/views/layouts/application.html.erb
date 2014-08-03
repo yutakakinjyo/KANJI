@@ -44,7 +44,6 @@
   </head>
   <body>
 
-    <% if user_signed_in? %>
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
 	<div class="container">
@@ -55,26 +54,22 @@
           <div class="container nav-collapse">
             <ul class="nav">
 	      <li>
+		<% if user_signed_in? %>
 		<%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+		<% end %>
 	      </li>
             </ul>
           </div><!--/.nav-collapse -->
 	</div>
       </div>
     </div><!--/.navbar navbar-fixed-top -->
-    <% end %>
 
-    <div class="full">
-      <div class="container" id="content">
-	<div class="row">
-          <%= bootstrap_flash %>
-          <%= yield %>
-	</div><!--/row-->
-	<div id="footer">
-	  <p>&copy; Naoto SHINGAKI 2014</p>
-	</div>
-      </div> <!-- /container -->
+
+    <%= bootstrap_flash %>
+    <%= yield %>
+
+    <div id="footer">
+      <p>&copy; Naoto SHINGAKI 2014</p>
     </div>
-
-</body>
+  </body>
 </html>
