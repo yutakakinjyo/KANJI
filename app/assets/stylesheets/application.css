@@ -13,3 +13,35 @@
  *= require_tree .
  *= require_self
  */
+
+.full {
+  background: url(https://cloud.githubusercontent.com/assets/1648096/3780289/37c71462-198b-11e4-9db0-7097a0875186.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+
+.login {
+  color: white;
+}
+
+html,
+body {
+  height: 100%;
+  /* html と body 要素はパディングやマージンを持てません。*/
+}
+
+#wrap {
+  min-height: 100%;
+  height: auto;
+  /* フッターの高さ分だけ、ネガティブインデントを指定 */
+  margin: 0 auto -60px;
+  /* フッターの高さ分だけ、パディングを指定 */
+  padding: 0 0 60px;
+}
+
+#footer {
+  height: 50px;
+}

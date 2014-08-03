@@ -1,19 +1,26 @@
-<h1>KANJI</h1>
-<h5>最高の乾杯を</h5>
-<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+<div class="login">
+ <div class="span8">
+  <h1>KANJI</h1>
+  <h5>最高の乾杯を</h5>
+ </div>
+<div class="span4">
+
+
+  <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
 
   <div> <%= f.text_field :login, :autofocus => true, :placeholder => "LDAPアカウント名" %></div>
 
   <div> <%= f.password_field :password, :placeholder => "LDAPパスワード" %> </div>
 
   <div class="form-inline">
-	<% if devise_mapping.rememberable? -%>
-          <%= f.check_box :remember_me %>
-  	  <%= f.label :remember_me, "パスワードを保存する" %>
-        <% end -%>
+    <% if devise_mapping.rememberable? -%>
+    <%= f.check_box :remember_me %>
+    <%= f.label :remember_me, "パスワードを保存する" %>
+    <% end -%>
   </div>
 
   <div> <%= f.submit "Sign in", :class => "btn btn-primary" %> </div>
 
-<% end %>
-
+  <% end %>
+</div>
+ </div>
