@@ -1,15 +1,29 @@
-<h1>Sign in</h1>
-<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-  <div><%= f.label :login %><br />
-  <%= f.text_field :login, :autofocus => true %></div>
+<div class="full" />
+<div id="content" >
+  <div style="padding-top: 30px;">
+    <div class="login-color">
+      <div class="back">
 
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
+        <div class="title">KANJI</div>
+	<h5>最高の乾杯を</h5>
 
-  <% if devise_mapping.rememberable? -%>
-    <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
-  <% end -%>
+	<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+	<div> <%= f.text_field :login, :autofocus => true, :placeholder => "LDAPアカウント名" %></div>
+	<div> <%= f.password_field :password, :placeholder => "LDAPパスワード" %> </div>
 
-  <div><%= f.submit "Sign in" %></div>
-<% end %>
+	<div class="form-inline">
+	  <% if devise_mapping.rememberable? -%>
+	  <%= f.check_box :remember_me %>
+	  <%= f.label :remember_me, "パスワードを保存する" %>
+	  <% end -%>
+	</div>
 
+	<div> <%= f.submit "Sign in", :class => "btn btn-primary" %> </div>
+	<div class="credit">
+	  photo by Tatsuo Yamashita 「ビール」
+	  <% end %>
+	</div>
+      </div>
+    </div>
+  </div>
+</div>

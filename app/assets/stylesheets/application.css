@@ -13,3 +13,57 @@
  *= require_tree .
  *= require_self
  */
+
+.full {
+
+  background: url(https://cloud.githubusercontent.com/assets/1648096/3780289/37c71462-198b-11e4-9db0-7097a0875186.jpg);
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+
+  min-height: 100%;
+
+  width: 100%;
+  height: auto;
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+}
+
+.login-color {
+  color: white;
+}
+
+.back {
+  padding: 100px;
+}
+
+.credit {
+  padding-top: 10px;
+  color: white;	
+}
+
+
+#footer {
+  /*position: absolute;*/
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+html,body {
+  height: 100%;
+}
+
+.title {
+  font-size: 60px;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+
+
