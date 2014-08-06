@@ -13,6 +13,10 @@ class User < ActiveRecord::Base
     plan.users.include?(self)
   end
 
+  def name
+    profile.nil? ? login : profile.name
+  end
+
   def avatar_large
     "#{gravatar}?s=100"
   end
