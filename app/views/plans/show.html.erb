@@ -6,12 +6,12 @@
     <%=h @plan.print_detail.html_safe %>
   </p>
   <p><strong>人数</strong>: <%= @plan.users.size %>/<%= @plan.size %></p>
-  <p><strong>幹事</strong>: <img src="<%= @plan.user.avatar_small %>" /> <%= @plan.user.profile.name %></p>
+  <p><strong>幹事</strong>: <img src="<%= @plan.user.avatar_small %>" /> <%= @plan.user.name %></p>
 </div>
 <div>
   <strong>参加者:</strong>
   <% @plan.users.each do |user| %>
-    <div><img src="<%= user.avatar_small %>" /> <%= user.profile.name %></div>
+    <div><img src="<%= user.avatar_small %>" /> <%= user.name %></div>
   <% end %>
 </div>
 
