@@ -52,13 +52,19 @@
           </a>
           <a class="brand" href="#">KANJI</a>
           <div class="container nav-collapse">
+            <% if user_signed_in? %>
             <ul class="nav">
-	      <li>
-		<% if user_signed_in? %>
-		<%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
-		<% end %>
-	      </li>
+              <li>
+                <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+              </li>
+              <li>
+                <%= link_to "Plan", '/plans' %> 
+              </li>
+              <li>
+                <%= link_to "Profile", '/profiles' %>
+              </li>
             </ul>
+            <% end %>
           </div><!--/.nav-collapse -->
 	</div>
       </div>
